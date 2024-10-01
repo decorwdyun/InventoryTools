@@ -53,25 +53,25 @@ namespace InventoryTools.Ui
                     {
                         if (textChild.Success)
                         {
-                            ImGui.TextWrapped("Welcome to Allagan Tools.");
+                            ImGui.TextWrapped("欢迎使用 Allagan Tools.");
                             ImGui.TextWrapped(
-                                "Allagan Tools is a plugin for Final Fantasy XIV that provides the following features:");
+                                "Allagan Tools 是《最终幻想14》的一款插件，提供以下功能：");
                             using (ImRaii.PushIndent())
                             {
                                 ImGui.Bullet();
-                                ImGui.Text("Track your inventories");
+                                ImGui.Text("追踪你的库存");
                                 ImGui.Bullet();
-                                ImGui.Text("Plan your crafts");
+                                ImGui.Text("规划你的制作");
                                 ImGui.Bullet();
-                                ImGui.Text("Provide information about items, monsters, duties and much more");
+                                ImGui.Text("提供物品、怪物、副本等详细信息");
                             }
                             
                             ImGui.TextWrapped(
-                                "You can open various new windows using command shortcuts(the main filter  or from the main window.");
+                                "你可以使用命令快捷键或从主窗口打开各种新窗口。");
                             ImGui.TextWrapped(
-                                "If you're unsure, right-click on an item or a table row for more options!");
+                                "如果不确定，可以右键点击物品或表格行以查看更多选项！");
                             ImGui.TextWrapped(
-                                "To learn about the different features, I recommend going to the settings section and reading the information provided by the ? icons.");
+                                "想了解不同功能，建议前往设置部分，并查看?图标提供的信息。");
                         }
                     }
 

@@ -187,7 +187,7 @@ namespace InventoryTools.Commands
 
         [Command("/moreinfo")]
         [Aliases("/itemwindow")]
-        [HelpMessage("Opens the more information window for a specific item. Provide the name of the item or the ID of the item.")]
+        [HelpMessage("打开指定物品的详细信息窗口。请提供物品名称或物品ID。")]
         public void MoreInformation(string command, string args)
         {
             args = args.Trim();

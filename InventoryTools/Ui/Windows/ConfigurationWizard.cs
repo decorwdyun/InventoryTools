@@ -119,22 +119,22 @@ public class ConfigurationWizard : GenericWindow
                         {
                             if (_configurationWizardService.ConfiguredOnce)
                             {
-                                ImGui.TextWrapped("Welcome back to the Allagan Tools configuration wizard.");
+                                ImGui.TextWrapped("欢迎回到 Allagan Tools 配置向导。");
                                 ImGui.Separator();
                                 ImGui.TextWrapped(
-                                    "There are new features available to configure and you elected to show this window when that occurs.");
+                                    "有新功能可供配置，您选择在有新功能时显示此窗口。");
                                 ImGui.NewLine();
                             }
                             else
                             {
-                                ImGui.TextWrapped("Welcome to the Allagan Tools configuration wizard.");
+                                ImGui.TextWrapped("欢迎使用 Allagan Tools 配置向导。");
                                 ImGui.Separator();
                                 ImGui.TextWrapped(
-                                    "This will guide you through the setup of the most commonly used features. This wizard, with your permission will show itself again when a new feature gets released as features are normally left for the user to configure and activate.");
+                                    "这将引导您设置最常用的功能。新功能通常需要用户自行配置和激活，若您允许，向导将在新功能发布时再次显示。");
                                 ImGui.NewLine();
-                                ImGui.TextWrapped("If this is your first time using Allagan Tools, I'd recommend opening the help window and reading the General section. It gives you a run down of what the plugin can do.");
-                                ImGui.TextWrapped("If you are a returning user feel free to close this window.");
-                                if (ImGui.Button("Open Help"))
+                                ImGui.TextWrapped("如果这是您第一次使用 Allagan Tools，建议打开帮助窗口并阅读常规部分，它会为您介绍插件的功能。");
+                                ImGui.TextWrapped("如果您是老用户，可以随时关闭此窗口。");
+                                if (ImGui.Button("打开帮助"))
                                 {
                                     MediatorService.Publish(new ToggleGenericWindowMessage(typeof(HelpWindow)));
                                 }
@@ -191,27 +191,27 @@ public class ConfigurationWizard : GenericWindow
                             }
                             else
                             {
-                                if (ImGui.Button("Continue (and show on new features)"))
+                                if (ImGui.Button("继续（并展示新功能）"))
                                 {
                                     NextStep();
                                     _configuration.ShowWizardNewFeatures = true;
                                 }
 
                                 ImGui.SameLine();
-                                if (ImGui.Button("Continue (and never show the wizard again)"))
+                                if (ImGui.Button("继续（并不再显示此引导）"))
                                 {
                                     NextStep();
                                     _configuration.ShowWizardNewFeatures = false;
                                 }
 
-                                if (ImGui.Button("Close (and show next time the plugin loads)"))
+                                if (ImGui.Button("关闭（下次插件加载时显示）"))
                                 {
                                     Close();
                                     _configuration.ShowWizardNewFeatures = true;
                                 }
 
                                 ImGui.SameLine();
-                                if (ImGui.Button("Close (and never show the wizard again)"))
+                                if (ImGui.Button("关闭（并不再显示此引导）"))
                                 {
                                     Close();
                                     _configuration.ShowWizardNewFeatures = false;

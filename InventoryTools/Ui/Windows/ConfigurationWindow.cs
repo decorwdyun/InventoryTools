@@ -74,51 +74,51 @@ namespace InventoryTools.Ui
             _configPages.Add(_configPageFactory.Invoke(typeof(CharacterRetainerPage)));
             
             _addFilterMenu = new PopupMenu("addFilter", PopupMenu.PopupMenuButtons.LeftRight,
-                new List<PopupMenu.IPopupMenuItem>()
-                {
-                    new PopupMenu.PopupMenuItemSelectableAskName("Search Filter", "adf1", "New Search Filter", AddSearchFilter, "This will create a new filter that let's you search for specific items within your characters and retainers inventories."),
-                    new PopupMenu.PopupMenuItemSelectableAskName("Sort Filter", "af2", "New Sort Filter", AddSortFilter, "This will create a new filter that let's you search for specific items within your characters and retainers inventories then determine where they should be moved to."),
-                    new PopupMenu.PopupMenuItemSelectableAskName("Game Item Filter", "af3", "New Game Item Filter", AddGameItemFilter, "This will create a filter that lets you search for all items in the game."),
-                    new PopupMenu.PopupMenuItemSelectableAskName("History Filter", "af4", "New History Item Filter", AddHistoryFilter, "This will create a filter that lets you view historical data of how your inventory has changed."),
-                });
-            
+            new List<PopupMenu.IPopupMenuItem>()
+            {
+                new PopupMenu.PopupMenuItemSelectableAskName("搜索筛选器", "adf1", "新建搜索筛选器", AddSearchFilter, "这将创建一个新的筛选器，允许你在角色和雇员的库存中搜索特定物品。"),
+                new PopupMenu.PopupMenuItemSelectableAskName("整理筛选器", "af2", "新建整理筛选器", AddSortFilter, "这将创建一个新的筛选器，允许你在角色和雇员的库存中搜索特定物品，并确定它们应放置的位置。"),
+                new PopupMenu.PopupMenuItemSelectableAskName("游戏物品筛选器", "af3", "新建游戏物品筛选器", AddGameItemFilter, "这将创建一个筛选器，允许你搜索游戏中的所有物品。"),
+                new PopupMenu.PopupMenuItemSelectableAskName("历史记录筛选器", "af4", "新建历史记录筛选器", AddHistoryFilter, "这将创建一个筛选器，允许你查看库存变化的历史数据。"),
+            });
+
             _addSampleMenu = new PopupMenu("addSampleFilter", PopupMenu.PopupMenuButtons.LeftRight,
-                new List<PopupMenu.IPopupMenuItem>()
-                {
-                    new PopupMenu.PopupMenuItemSelectableAskName("All", "af4", "All", AddAllFilter, "This will add a filter that will be preconfigured to show items across all inventories."),
-                    new PopupMenu.PopupMenuItemSelectableAskName("Player", "af5", "Player", AddPlayerFilter, "This will add a filter that will be preconfigured to show items across all character inventories."),
-                    new PopupMenu.PopupMenuItemSelectableAskName("Retainers", "af6", "Retainers", AddRetainersFilter, "This will add a filter that will be preconfigured to show items across all retainer inventories."),
-                    new PopupMenu.PopupMenuItemSelectableAskName("Free Company", "af7", "Free Company", AddFreeCompanyFilter, "This will add a filter that will be preconfigured to show items across all free company inventories."),
-                    new PopupMenu.PopupMenuItemSelectableAskName("All Game Items", "af8", "All Game Items", AddAllGameItemsFilter, "This will add a filter that will be preconfigured to show all of the game's items."),
-                    new PopupMenu.PopupMenuItemSeparator(),
-                    new PopupMenu.PopupMenuItemSelectableAskName("Purchased for less than 100 gil", "af9", "Less than 100 gil", AddLessThan100GilFilter, "This will add a filter that will show all items that can be purchased from gil shops under 100 gil. It will look in both character and retainer inventories."),
-                    new PopupMenu.PopupMenuItemSelectableAskName("Put away materials +", "af10", "Put away materials", AddPutAwayMaterialsFilter, "This will add a filter that will be setup to quickly put away any excess materials. It will have all the material categories automatically added. When calculating where to put items it will try to prioritise existing stacks of items."),
-                    new PopupMenu.PopupMenuItemSelectableAskName("Duplicated items across characters/retainers +", "af11", "Duplicated items", AddDuplicatedItemsFilter, "This will add a filter that will provide a list of all the distinct stacks that appear in 2 sets of inventories. You can use this to make sure only one retainer has a specific type of item.")
-                });
-            
+            new List<PopupMenu.IPopupMenuItem>()
+            {
+                new PopupMenu.PopupMenuItemSelectableAskName("全部", "af4", "全部", AddAllFilter, "这将添加一个预配置的筛选器，显示所有库存中的物品。"),
+                new PopupMenu.PopupMenuItemSelectableAskName("玩家", "af5", "玩家", AddPlayerFilter, "这将添加一个预配置的筛选器，显示所有角色库存中的物品。"),
+                new PopupMenu.PopupMenuItemSelectableAskName("雇员", "af6", "雇员", AddRetainersFilter, "这将添加一个预配置的筛选器，显示所有雇员库存中的物品。"),
+                new PopupMenu.PopupMenuItemSelectableAskName("部队", "af7", "部队", AddFreeCompanyFilter, "这将添加一个预配置的筛选器，显示所有部队库存中的物品。"),
+                new PopupMenu.PopupMenuItemSelectableAskName("所有游戏物品", "af8", "所有游戏物品", AddAllGameItemsFilter, "这将添加一个预配置的筛选器，显示游戏中的所有物品。"),
+                new PopupMenu.PopupMenuItemSeparator(),
+                new PopupMenu.PopupMenuItemSelectableAskName("价格低于100金币的物品", "af9", "低于100金币", AddLessThan100GilFilter, "这将添加一个筛选器，显示可以在金币商店中以低于100金币购买的所有物品。它将检查角色和雇员库存。"),
+                new PopupMenu.PopupMenuItemSelectableAskName("整理多余材料 +", "af10", "整理材料", AddPutAwayMaterialsFilter, "这将添加一个筛选器，快速整理多余的材料，并自动添加所有材料分类。它将优先考虑已有的物品堆栈。"),
+                new PopupMenu.PopupMenuItemSelectableAskName("角色/雇员间重复的物品 +", "af11", "重复物品", AddDuplicatedItemsFilter, "这将添加一个筛选器，列出出现在多个库存中的所有重复堆栈。你可以用这个来确保只有一个雇员持有某类物品。")
+            });
+
             _settingsMenu = new PopupMenu("configMenu", PopupMenu.PopupMenuButtons.All,
-                new List<PopupMenu.IPopupMenuItem>()
-                {
-                    new PopupMenu.PopupMenuItemSelectable("Items Window", "filters", OpenFiltersWindow,"Open the items window."),
-                    new PopupMenu.PopupMenuItemSelectable("Craft Window", "crafts", OpenCraftsWindow,"Open the crafts window."),
-                    new PopupMenu.PopupMenuItemSeparator(),
-                    new PopupMenu.PopupMenuItemSelectable("Mob Window", "mobs", OpenMobsWindow,"Open the mobs window."),
-                    new PopupMenu.PopupMenuItemSelectable("Npcs Window", "npcs", OpenNpcsWindow,"Open the npcs window."),
-                    new PopupMenu.PopupMenuItemSelectable("Duties Window", "duties", OpenDutiesWindow,"Open the duties window."),
-                    new PopupMenu.PopupMenuItemSelectable("Airships Window", "airships", OpenAirshipsWindow,"Open the airships window."),
-                    new PopupMenu.PopupMenuItemSelectable("Submarines Window", "submarines", OpenSubmarinesWindow,"Open the submarines window."),
-                    new PopupMenu.PopupMenuItemSelectable("Retainer Ventures Window", "ventures", OpenRetainerVenturesWindow,"Open the retainer ventures window."),
-                    new PopupMenu.PopupMenuItemSelectable("Tetris", "tetris", OpenTetrisWindow,"Open the tetris window.", () => _configuration.TetrisEnabled),
-                    new PopupMenu.PopupMenuItemSeparator(),
-                    new PopupMenu.PopupMenuItemSelectable("Help", "help", OpenHelpWindow,"Open the help window."),
-                });
-            
+            new List<PopupMenu.IPopupMenuItem>()
+            {
+                new PopupMenu.PopupMenuItemSelectable("物品窗口", "filters", OpenFiltersWindow,"打开物品窗口。"),
+                new PopupMenu.PopupMenuItemSelectable("制作窗口", "crafts", OpenCraftsWindow,"打开制作窗口。"),
+                new PopupMenu.PopupMenuItemSeparator(),
+                new PopupMenu.PopupMenuItemSelectable("怪物窗口", "mobs", OpenMobsWindow,"打开怪物窗口。"),
+                new PopupMenu.PopupMenuItemSelectable("NPC 窗口", "npcs", OpenNpcsWindow,"打开 NPC 窗口。"),
+                new PopupMenu.PopupMenuItemSelectable("副本窗口", "duties", OpenDutiesWindow,"打开副本窗口。"),
+                new PopupMenu.PopupMenuItemSelectable("飞空艇窗口", "airships", OpenAirshipsWindow,"打开飞空艇窗口。"),
+                new PopupMenu.PopupMenuItemSelectable("潜水艇窗口", "submarines", OpenSubmarinesWindow,"打开潜水艇窗口。"),
+                new PopupMenu.PopupMenuItemSelectable("雇员探险窗口", "ventures", OpenRetainerVenturesWindow,"打开雇员探险窗口。"),
+                new PopupMenu.PopupMenuItemSelectable("俄罗斯方块", "tetris", OpenTetrisWindow,"打开俄罗斯方块窗口。", () => _configuration.TetrisEnabled),
+                new PopupMenu.PopupMenuItemSeparator(),
+                new PopupMenu.PopupMenuItemSelectable("帮助", "help", OpenHelpWindow,"打开帮助窗口。"),
+            });
+
             _wizardMenu = new PopupMenu("wizardMenu", PopupMenu.PopupMenuButtons.All,
-                new List<PopupMenu.IPopupMenuItem>()
-                {
-                    new PopupMenu.PopupMenuItemSelectable("Configure new settings", "configureNew", ConfigureNewSettings,"Configure new settings."),
-                    new PopupMenu.PopupMenuItemSelectable("Configure all settings", "configureAll", ConfigureAllSettings,"Configure all settings."),
-                });
+            new List<PopupMenu.IPopupMenuItem>()
+            {
+                new PopupMenu.PopupMenuItemSelectable("配置新设置", "configureNew", ConfigureNewSettings,"配置新设置。"),
+                new PopupMenu.PopupMenuItemSelectable("配置所有设置", "configureAll", ConfigureAllSettings,"配置所有设置。"),
+            });
 
             GenerateFilterPages();
             MediatorService.Subscribe<ListInvalidatedMessage>(this, _ => Invalidate());
