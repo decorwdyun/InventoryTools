@@ -61,7 +61,7 @@ namespace InventoryTools.Ui
         private List<MobSpawnPosition>? _mobSpawns;
 
         private BNpcNameRow? bNpc => _bNpcNameSheet.GetRowOrDefault(_bNpcId);
-        public override string GenericName => "Mob";
+        public override string GenericName => "怪物";
         public override bool DestroyOnClose => true;
         public override void Draw()
         {

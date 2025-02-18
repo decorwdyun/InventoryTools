@@ -105,7 +105,7 @@ namespace InventoryTools.Ui
             _listService.GetListByKey(_filterKey);
 
         public override string GenericKey { get; } = "filter";
-        public override string GenericName { get; } = "Filter";
+        public override string GenericName { get; } = "筛选";
         public override bool DestroyOnClose => true;
         public override bool SaveState => true;
 

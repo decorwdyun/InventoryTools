@@ -52,7 +52,7 @@ namespace InventoryTools.Ui
         private AirshipExplorationPointRow? AirshipExplorationPoint => _airshipExplorationPointSheet.GetRowOrDefault(_airshipExplorationPointId);
 
         public override string GenericKey => "airship";
-        public override string GenericName => "Airship";
+        public override string GenericName => "飞空艇";
         public override bool DestroyOnClose => true;
         public override void Draw()
         {

@@ -101,7 +101,7 @@ namespace InventoryTools.Ui
 
         private Dictionary<uint, List<DungeonBossChest>> DungeonBossChests { get; set; } = null!;
         public override string GenericKey => "duty";
-        public override string GenericName => "Duty";
+        public override string GenericName => "任务";
         public override bool DestroyOnClose => true;
         public override void Draw()
         {

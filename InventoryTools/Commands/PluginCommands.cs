@@ -34,27 +34,30 @@ namespace InventoryTools.Commands
 
         [Command("/allagantools")]
         [Aliases("/atools")]
-        [HelpMessage("Shows the allagan tools items list window.")]
+        [HelpMessage("显示 Allagan Tools 物品列表窗口。")]
         public void ShowHideInventoryToolsCommand(string command, string args)
         {
             _mediatorService.Publish(new ToggleGenericWindowMessage(typeof(FiltersWindow)));
         }
+
         [Command("/duties")]
         [Aliases("/atduties")]
-        [HelpMessage("Shows the allagan tools duties window.")]
+        [HelpMessage("显示 Allagan Tools 副本窗口。")]
         public void ShowHideDutiesWindow(string command, string args)
         {
             _mediatorService.Publish(new ToggleGenericWindowMessage(typeof(DutiesWindow)));
         }
+
         [Command("/mobs")]
         [Aliases("/atmobs")]
-        [HelpMessage("Shows the allagan tools mobs window.")]
+        [HelpMessage("显示 Allagan Tools 怪物窗口。")]
         public void ShowHideMobsWindow(string command, string args)
         {
             _mediatorService.Publish(new ToggleGenericWindowMessage(typeof(BNpcsWindow)));
         }
+
         [Command("/atnpcs")]
-        [HelpMessage("Shows the allagan tools npcs window.")]
+        [HelpMessage("显示 Allagan Tools NPC 窗口。")]
         public void ShowHideNpcsWindow(string command, string args)
         {
             _mediatorService.Publish(new ToggleGenericWindowMessage(typeof(ENpcsWindow)));
@@ -101,42 +104,42 @@ namespace InventoryTools.Commands
         }
 
         [Command("/crafts")]
-        [HelpMessage("Opens the allagan tools crafts window")]
-        public  void OpenCraftsWindow(string command, string args)
+        [HelpMessage("打开 Allagan Tools 制作窗口")]
+        public void OpenCraftsWindow(string command, string args)
         {
             _mediatorService.Publish(new ToggleGenericWindowMessage(typeof(CraftsWindow)));
         }
 
         [Command("/airships")]
-        [HelpMessage("Opens the allagan tools airships window")]
-        public  void ToggleAirshipsWindow(string command, string args)
+        [HelpMessage("打开 Allagan Tools 飞空艇窗口")]
+        public void ToggleAirshipsWindow(string command, string args)
         {
             _mediatorService.Publish(new ToggleGenericWindowMessage(typeof(AirshipsWindow)));
         }
 
         [Command("/submarines")]
-        [HelpMessage("Opens the allagan tools submarines window")]
-        public  void ToggleSubmarinesWindow(string command, string args)
+        [HelpMessage("打开 Allagan Tools 潜水艇窗口")]
+        public void ToggleSubmarinesWindow(string command, string args)
         {
             _mediatorService.Publish(new ToggleGenericWindowMessage(typeof(SubmarinesWindow)));
         }
 
         [Command("/retainerventures")]
-        [HelpMessage("Opens the allagan tools retainer ventures window")]
+        [HelpMessage("打开 Allagan Tools 雇员探险窗口")]
         public  void ToggleToggleRetainerTasksWindow(string command, string args)
         {
             _mediatorService.Publish(new ToggleGenericWindowMessage(typeof(RetainerTasksWindow)));
         }
 
         [Command("/atconfig")]
-        [HelpMessage("Opens the allagan tools configuration window")]
+        [HelpMessage("打开 Allagan Tools 配置窗口")]
         public  void OpenConfigurationWindow(string command, string args)
         {
             _mediatorService.Publish(new ToggleGenericWindowMessage(typeof(ConfigurationWindow)));
         }
 
         [Command("/athelp")]
-        [HelpMessage("Opens the allagan tools help window")]
+        [HelpMessage("打开 Allagan Tools 帮助窗口")]
         public  void OpenHelpWindow(string command, string args)
         {
             _mediatorService.Publish(new ToggleGenericWindowMessage(typeof(HelpWindow)));
@@ -196,7 +199,7 @@ namespace InventoryTools.Commands
 
         [Command("/moreinfo")]
         [Aliases("/itemwindow")]
-        [HelpMessage("Opens the more information window for a specific item. Provide the name of the item or the ID of the item.")]
+        [HelpMessage("打开指定物品的详细信息窗口。请提供物品名称或物品ID。")]
         public void MoreInformation(string command, string args)
         {
             args = args.Trim();
