@@ -24,7 +24,7 @@ public class ListDebugWindow : GenericWindow
     }
 
     public override string GenericKey { get; } = "listdebug";
-    public override string GenericName { get; } = "List Debug";
+    public override string GenericName { get; } = "列表 Debug";
     public override bool DestroyOnClose => true;
     public override bool SaveState => false;
     public override Vector2? DefaultSize { get; } = new(500, 500);

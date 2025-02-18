@@ -58,7 +58,7 @@ namespace InventoryTools.Ui
 
 
         public override string GenericKey { get; } = "retainertask";
-        public override string GenericName { get; } = "Retainer Task";
+        public override string GenericName { get; } = "雇员任务";
         public override bool DestroyOnClose => true;
         public override void Draw()
         {

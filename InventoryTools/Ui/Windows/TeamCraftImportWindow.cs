@@ -28,7 +28,7 @@ public class TeamCraftImportWindow : GenericWindow
 
 
     public override string GenericKey { get; } = "tcimport";
-    public override string GenericName { get; } = "Teamcraft Import";
+    public override string GenericName { get; } = "Teamcraft 导入";
     public override bool DestroyOnClose { get; }
     public override bool SaveState { get; } = false;
     public override Vector2? DefaultSize { get; } = new Vector2(300, 300);

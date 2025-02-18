@@ -351,7 +351,7 @@ public class DutiesWindow : GenericTabbedTable<ContentFinderConditionRow>, IMenu
 
     public override bool UseClipper => _useClipper;
     public override string GenericKey => "duties";
-    public override string GenericName => "Duties";
+    public override string GenericName => "任务";
     public override bool DestroyOnClose => false;
     public override bool SaveState => true;
     public override Vector2? MaxSize { get; } = new(2000, 2000);

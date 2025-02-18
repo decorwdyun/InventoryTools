@@ -265,7 +265,7 @@ namespace InventoryTools.Ui
 
         private List<CriticalCommonLib.Models.InventoryItem> OwnedItems { get; set; }
 
-        public override string GenericName { get; } = "Item";
+        public override string GenericName { get; } = "物品";
         public override bool DestroyOnClose => true;
         public override void Draw()
         {

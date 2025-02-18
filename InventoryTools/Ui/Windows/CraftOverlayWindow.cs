@@ -516,7 +516,7 @@ public class CraftOverlayWindow : OverlayWindow
 
     public override FilterConfiguration? SelectedConfiguration => _listService.GetActiveCraftList();
     public override string GenericKey { get; } = "CraftOverlay";
-    public override string GenericName { get; } = "Craft Overlay";
+    public override string GenericName { get; } = "制作悬浮窗";
     public override bool DestroyOnClose { get; } = false;
 
     public override bool SaveState => this._rememberStateSetting.CurrentValue(Configuration);

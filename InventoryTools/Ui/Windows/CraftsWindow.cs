@@ -193,7 +193,7 @@ namespace InventoryTools.Ui
         public override Vector2? MaxSize => new Vector2(5000, 5000);
         public override Vector2? MinSize => new Vector2(300, 300);
         public override string GenericKey => "crafts";
-        public override string GenericName => "Crafts";
+        public override string GenericName => "制作";
         public override bool DestroyOnClose => false;
         private int _selectedFilterTab;
         private bool _addItemBarOpen;

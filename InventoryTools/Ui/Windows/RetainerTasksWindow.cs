@@ -282,7 +282,7 @@ public class RetainerTasksWindow : GenericTabbedTable<RetainerTaskRow>, IMenuWin
     }
 
     public override string GenericKey { get; } = "retainerTasks";
-    public override string GenericName { get; } = "Retainer Tasks";
+    public override string GenericName { get; } = "雇员任务";
     public override bool DestroyOnClose => false;
     public override bool SaveState => true;
     public override Vector2? MaxSize { get; } = new(2000, 2000);
